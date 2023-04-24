@@ -4,10 +4,11 @@ import './index.css';
 import App from './components/App';
 import reportWebVitals from './reportWebVitals';
 import { createStore } from 'redux';
-import reducer from './reducers/ticket-list-reducer';
+// import reducer from './reducers/ticket-list-reducer'; // removed after creation of rootReducer
+import rootReducer from './reducers/index';
 import { Provider } from 'react-redux';
 
-const store = createStore(reducer);
+const store = createStore(rootReducer); //udpated from createStore(reducer)
 
 store.subscribe(() =>
   console.log(store.getState())
