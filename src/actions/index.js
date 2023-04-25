@@ -1,10 +1,13 @@
+import * as c from './../actions/ActionTypes';
+
 export const deleteTicket = id => ({
   type: 'DELETE_TICKET',
   id
 });
 
 export const toggleForm = () => ({
-  type: 'TOGGLE_FORM'
+  // type: 'TOGGLE_FORM'
+  type: c.TOGGLE_FORM
 });
 
 export const addTicket = (ticket) => {
